@@ -94,27 +94,28 @@ def hash_csv_file():
                         empty_cells += 1
                 writer.writerow(new_row)
 
-        # Показываем результат со статистикой
+        # Логируем результат со статистикой
         logging.info(
             f"Успешно\n"
             f"Статистика обработки:\n"
-            f"• Обработано строк: {total_rows}\n"
-            f"• Обработано ячеек: {total_cells}\n"
-            f"• Захешировано ячеек: {hashed_cells}\n"
-            f"• Пустых ячеек: {empty_cells}\n"
-            f"• Использован разделитель: '{delimiter}'"
+            f"Обработано строк: {total_rows}\n"
+            f"Обработано ячеек: {total_cells}\n"
+            f"Захешировано ячеек: {hashed_cells}\n"
+            f"Пустых ячеек: {empty_cells}\n"
+            f"Использован разделитель: '{delimiter}'"
         )
+        # выводим попап окно со статистикой
         messagebox.showinfo(
             "Готово!",
             f"Файл сохранен:\n{new_file_path}\n\n"
             f"Статистика обработки:\n"
-            f"• Обработано строк: {total_rows}\n"
-            f"• Обработано ячеек: {total_cells}\n"
-            f"• Захешировано ячеек: {hashed_cells}\n"
-            f"• Пустых ячеек: {empty_cells}\n"
-            f"• Использован разделитель: '{delimiter}'",
+            f"Обработано строк: {total_rows}\n"
+            f"Обработано ячеек: {total_cells}\n"
+            f"Захешировано ячеек: {hashed_cells}\n"
+            f"Пустых ячеек: {empty_cells}\n"
+            f"Использован разделитель: '{delimiter}'",
         )
-
+    # Сообщаем об ошибке, логируем ее
     except Exception as e:
         logging.error(f"Ошибка: {e}")
         messagebox.showerror("Ошибка", f"Ошибка: {e}")

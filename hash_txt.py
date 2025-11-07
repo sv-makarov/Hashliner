@@ -42,13 +42,13 @@ def hash_txt_file():
         logging.info("Работаем с путями txt файла")
         # Применяем кодировку
         encoding = detect_encoding(file_path)
-
+        # Работаем с путями файлов
         folder = os.path.dirname(file_path)
         filename = os.path.basename(file_path)
         new_filename = "hash_" + filename
         new_file_path = os.path.join(folder, new_filename)
 
-        # Счетчики
+        # Счетчики для статистики
         total_lines = 0
         hashed_lines = 0
         empty_lines = 0
@@ -72,22 +72,22 @@ def hash_txt_file():
 
                 # Записываем хеш
                 hash_txt_file.write(hash_hex + "\n")
-
+        # Выводим попап окно со статистикой
         messagebox.showinfo(
             "Успешно!",
             f"Файл создан:\n{new_file_path}\n\n"
             f"Статистика обработки:\n"
-            f"• Всего строк в файле: {total_lines}\n"
-            f"• Успешно обработано: {hashed_lines}\n"
-            f"• Пустых строк: {empty_lines}\n",
+            f"Всего строк в файле: {total_lines}\n"
+            f"Успешно обработано: {hashed_lines}\n"
+            f"Пустых строк: {empty_lines}\n",
         )
-
+        # Логируем статистику
         logging.info(
             f"Успешно\n"
             f"Статистика обработки:\n"
-            f"• Всего строк в файле: {total_lines}\n"
-            f"• Успешно обработано: {hashed_lines}\n"
-            f"• Пустых строк: {empty_lines}\n",
+            f"Всего строк в файле: {total_lines}\n"
+            f"Успешно обработано: {hashed_lines}\n"
+            f"Пустых строк: {empty_lines}\n",
         )
 
     except Exception as e:
