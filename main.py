@@ -3,7 +3,9 @@
 # Email для связи: 01@sv-makarov.ru
 
 from hash_txt import hash_txt_file  # импорт функции работы с txt файлом
-from hash_csv import hash_csv_file  # импорт функции работы с csv файлом
+from hash_csv import (
+    hash_csv_file,
+)  # git commit -m "..." импорт функции работы с csv файлом
 import os  # модуль для работы с путями к файлу и каталогам
 from tkinter import *  # модули GUI
 from tkinter import (
