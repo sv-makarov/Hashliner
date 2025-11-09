@@ -1,4 +1,4 @@
-# ------------- HashLiner -------------
+# ------------- Hashliner -------------
 # Макаров Сергей, sv-makarov.ru
 # Email для связи: 01@sv-makarov.ru
 
@@ -19,7 +19,7 @@ from tkinter import ttk  # модуль GUI
 # ------------- Интерфейс программы -------------
 
 window = Tk()
-window.title("HashLiner - построчное хеширование TXT и CSV файлов (SHA256)")
+window.title("Hashliner - построчное хеширование TXT и CSV файлов (SHA256)")
 window.geometry("560x290")
 
 # создаём вкладки (объект Notebook)

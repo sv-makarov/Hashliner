@@ -89,7 +89,7 @@ def hash_txt_file():
             f"Успешно обработано: {hashed_lines}\n"
             f"Пустых строк: {empty_lines}\n",
         )
-
+    # Отлавливаем ошибку, если она есть
     except Exception as e:
         logging.error(f"Ошибка: {e}")
         messagebox.showerror("Ошибка", f"Произошла ошибка:\n{e}")

@@ -115,7 +115,7 @@ def hash_csv_file():
             f"Пустых ячеек: {empty_cells}\n"
             f"Использован разделитель: '{delimiter}'",
         )
-    # Сообщаем об ошибке, логируем ее
+    # # Отлавливаем ошибку, если она есть
     except Exception as e:
         logging.error(f"Ошибка: {e}")
         messagebox.showerror("Ошибка", f"Ошибка: {e}")
