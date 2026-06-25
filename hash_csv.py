@@ -1,7 +1,7 @@
 import logging  # модуль для ведения логов
 import hashlib  # модуль для хеширования
 import os  # модуль для работы с путями к файлу и каталогам
-import csv  # модуль для ведения логов
+import csv  # модуль для ведения работы с csv файлами
 from tkinter import *  # модули GUI
 from tkinter import (
     filedialog,
